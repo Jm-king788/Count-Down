@@ -9,6 +9,11 @@ const inputs = document.querySelectorAll("input")
     const end = new Date(endDate)
     const now = new Date()
      const diff = (end - now) /1000 ;
+   if (diff < 0){
+        alert("End Date  Error");
+        return
+    
+     }; 
      // seconds to days
 
     inputs[0].value = Math.floor(diff/3600/24);
